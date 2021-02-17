@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ng-new-music": {
+      "hosting": {
+        "ng-new-music": [
+          "ng-new-music"
+        ]
+      }
+    }
+  }
+}
