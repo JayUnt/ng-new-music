@@ -1,4 +1,7 @@
 import { Injectable } from '@angular/core';
+import { combineLatest } from 'rxjs';
+import { map } from 'rxjs/operators';
+
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Album } from '../models/album';
 import { AlbumRating } from '../models/album-rating';
@@ -16,6 +19,21 @@ export class AlbumService {
     ref.where('userId', '==', USER_ID)
   );
   albumRatings$ = this.albumRatingDB.valueChanges({ idField: 'id' });
+
+  albumsWithRatings$ = combineLatest([
+    this.albums$,
+    this.albumRatings$
+  ]).pipe(
+    map(([albums, albumRatings]) => {
+      return albums.filter(a => !a.hidden).map((album) => {
+        const rating = albumRatings.find((r) => r.albumId === album.id);
+        return {
+          ...album,
+          rating: rating ? rating.rating : null,
+        };
+      });
+    })
+  );
 
   constructor(private store: AngularFirestore) {}
 
@@ -35,6 +53,6 @@ export class AlbumService {
   }
 
   private getAlbumRatingId(userId: string, albumId: string) {
-    return `${userId}-${albumId.toUpperCase()}`;
+    return `${userId}-${albumId}`;
   }
 }

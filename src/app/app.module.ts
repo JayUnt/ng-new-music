@@ -20,6 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AlbumComponent } from './album/album.component';
 import { RateAlbumComponent } from './rate-album/rate-album.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { RateAlbumComponent } from './rate-album/rate-album.component';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
     
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,

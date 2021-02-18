@@ -7,4 +7,5 @@ export interface Album {
   releaseDay: number;
   genres: string[];
   rating?: number;
+  hidden?: boolean;
 }
