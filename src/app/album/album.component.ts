@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { RateAlbumComponent } from '../rate-album/rate-album.component';
 import { Album } from '../models/album';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { EditAlbumComponent } from '../edit-album/edit-album.component';
 
 @Component({
   selector: 'app-album',
@@ -13,11 +13,11 @@ export class AlbumComponent {
   @Input() album: Album;
   @Output() edit = new EventEmitter<Album>();
 
-  constructor(private dialog: MatDialog, private store: AngularFirestore) {}
+  constructor(private dialog: MatDialog) {}
 
   rateAlbum(): void {
-    this.dialog.open(RateAlbumComponent, {
-      data: { album: this.album },      
+    this.dialog.open(EditAlbumComponent, {
+      data: {album: this.album },      
     });    
   }
 }

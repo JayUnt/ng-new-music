@@ -36,6 +36,20 @@ export class AlbumService {
 
   constructor(private store: AngularFirestore) {}
 
+  updateAlbum(album: Album) {
+    album.id = this.getAlbumId(album);
+
+    if (!album.releaseDay) delete album.releaseDay;
+
+    this.albumDB.doc(album.id).set(album);
+  }
+
+  hideAlbum(album: Album) {
+    this.albumDB.doc(album.id).update({
+      hidden: true,
+    });
+  }
+
   updateAlbumRating(album: Album, rating: number) {
     const albumRatingId = this.getAlbumRatingId(USER_ID, album.id);
 
@@ -51,13 +65,13 @@ export class AlbumService {
     this.albumRatingDB.doc(albumRatingId).delete();
   }
 
-  private getAlbumRatingId(userId: string, albumId: string) {
-    return `${userId}-${albumId}`;
+  private getAlbumId(album: Album) {
+    const formatStr = (str) => str.replace(/[\W_]+/g, "_").toUpperCase();
+
+    return `${album.releaseYear}-${formatStr(album.artist)}-${formatStr(album.name)}`;
   }
 
-  hideAlbum(album: Album) {
-    this.albumDB.doc(album.id).update({
-      hidden: true,
-    });
+  private getAlbumRatingId(userId: string, albumId: string) {
+    return `${userId}-${albumId}`;
   }
 }

@@ -4,7 +4,7 @@ export interface Album {
   artist: string;
   releaseYear: number;
   releaseMonth: number;
-  releaseDay: number;
+  releaseDay?: number;
   genres: string[];
   rating?: number;
   hidden?: boolean;

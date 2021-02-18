@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { AddAlbumComponent } from './add-album/add-album.component';
 
 import { AlbumService } from './services/album.service';
 
@@ -13,5 +15,9 @@ export class AppComponent {
 
   albumsWithRatings$ = this.albumService.albumsWithRatings$;l
 
-  constructor(private albumService: AlbumService) {}
+  constructor(private albumService: AlbumService, private dialog: MatDialog) {}
+
+  addAlbum(): void {
+    this.dialog.open(AddAlbumComponent);
+  }
 }

@@ -16,15 +16,24 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatBadgeModule } from '@angular/material/badge';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AlbumComponent } from './album/album.component';
 import { RateAlbumComponent } from './rate-album/rate-album.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AddAlbumComponent } from './add-album/add-album.component';
+import { EditAlbumComponent } from './edit-album/edit-album.component';
 
 @NgModule({
-  declarations: [AppComponent, AlbumComponent, RateAlbumComponent],
+  declarations: [
+    AppComponent,
+    AlbumComponent,
+    RateAlbumComponent,
+    AddAlbumComponent,
+    EditAlbumComponent,
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -42,6 +51,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     MatChipsModule,
     MatSlideToggleModule,
+    MatBadgeModule,
 
     AppRoutingModule,
   ],

@@ -1,0 +1,71 @@
+<div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell">
+      <mat-form-field>
+        <mat-label>Artist</mat-label>
+        <input matInput cdkFocusInitial [(ngModel)]="album.artist" />
+      </mat-form-field>
+    </div>
+    <div class="mdc-layout-grid__cell">
+      <mat-form-field>
+        <mat-label>Title</mat-label>
+        <input matInput cdkFocusInitial [(ngModel)]="album.name" />
+      </mat-form-field>
+    </div>
+    <div class="mdc-layout-grid__cell">
+      <mat-form-field>
+        <mat-label>Year</mat-label>
+        <input matInput cdkFocusInitial [(ngModel)]="album.releaseYear" />
+      </mat-form-field>
+    </div>
+    <div class="mdc-layout-grid__cell">
+      <mat-form-field>
+        <mat-label>Month</mat-label>
+        <input matInput cdkFocusInitial [(ngModel)]="album.releaseMonth" />
+      </mat-form-field>
+    </div>
+    <div class="mdc-layout-grid__cell">
+      <mat-form-field>
+        <mat-label>Day</mat-label>
+        <input matInput cdkFocusInitial [(ngModel)]="album.releaseDay" />
+      </mat-form-field>
+    </div>
+
+    <div class="mdc-layout-grid__cell">
+      <mat-form-field class="example-chip-list">
+        <mat-label>Genres</mat-label>
+        <mat-chip-list #chipList aria-label="Genres">
+          <mat-chip
+            *ngFor="let genre of album.genres"
+            [selectable]="false"
+            [removable]="true"
+            (removed)="removeGenre(genre)"
+          >
+            {{ genre }}
+            <mat-icon matChipRemove>cancel</mat-icon>
+          </mat-chip>
+          <input
+            placeholder="New Genre..."
+            [matChipInputFor]="chipList"
+            [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+            [matChipInputAddOnBlur]="true"
+            (matChipInputTokenEnd)="addGenre($event)"
+          />
+        </mat-chip-list>
+      </mat-form-field>
+    </div>
+    
+    <div class="mdc-layout-grid__cell">
+      <mat-form-field>
+        <mat-label>Rating</mat-label>
+        <input matInput cdkFocusInitial [(ngModel)]="rating" number />
+      </mat-form-field>
+
+    </div>
+  </div>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="submit()">OK</button>
+  <button mat-button (click)="cancel()">Cancel</button>
+</div>
