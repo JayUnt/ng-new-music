@@ -76,6 +76,7 @@ const scraperObject = {
       const albums = await page.$$eval('.albumBlock', (albumBlocks, genre) => {
 
         const albumData = albumBlocks.map(albumBlock => {
+          // const siteScore = albumBlock.querySelector('.ratingRow .rating:last-child').textContent;
 
           const releaseDateStr = albumBlock.querySelector('.date').textContent;
           const d = new Date(`${releaseDateStr}, 2021`);
@@ -85,6 +86,7 @@ const scraperObject = {
             releaseYear: d.getFullYear(),
             releaseMonth: d.getMonth() + 1,
             releaseDay: d.getDay(),
+            // siteScore, 
             genres: [genre.name],
           }
         });
@@ -97,6 +99,8 @@ const scraperObject = {
   },
   async scraper(browser) {
     const scrapers = [];
+
+    //scrapers.push(this.scrapePage(browser, 2021, 2, genres[0]));
 
     const numMonths = 2;
     let currDate = new Date();

@@ -11,7 +11,7 @@
     <div class="mdc-layout-grid__cell">
       <mat-form-field>
         <mat-label>Title</mat-label>
-        <input matInput cdkFocusInitial [(ngModel)]="data.album.title" readonly disabled />
+        <input matInput cdkFocusInitial [(ngModel)]="data.album.name" readonly disabled />
       </mat-form-field>
     </div>
     <div class="mdc-layout-grid__cell">
@@ -27,6 +27,8 @@
 <div mat-dialog-actions>
   <button mat-button (click)="submit()">OK</button>
   <button mat-button (click)="cancel()">Cancel</button>
-
+</div>
+<div mat-dialog-actions>
   <button mat-button (click)="delete()">Delete Rating</button>
+  <button mat-button (click)="hide()">Hide Album</button>
 </div>

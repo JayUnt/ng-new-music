@@ -31,4 +31,9 @@ export class RateAlbumComponent {
     this.albumService.deleteAlbumRating(this.data.album);
     this.dialogRef.close();
   }
+
+  hide(): void {
+    this.albumService.hideAlbum(this.data.album);
+    this.dialogRef.close();
+  }
 }

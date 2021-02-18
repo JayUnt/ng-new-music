@@ -9,8 +9,9 @@ import { AlbumService } from './services/album.service';
 })
 export class AppComponent {
   currentUserId = '3eWtaN2ITkecZCzL1Z0M';
+  hideRated = false;
 
-  albumsWithRatings$ = this.albumService.albumsWithRatings$;
+  albumsWithRatings$ = this.albumService.albumsWithRatings$;l
 
   constructor(private albumService: AlbumService) {}
 }

@@ -6,6 +6,10 @@ mat-toolbar > span {
   margin-left: 10px;
 }
 
+.example-spacer {
+  flex: 1 1 auto;
+}
+
 .content-wrapper {
   max-width: 1400px;
   margin: auto;
@@ -17,8 +21,12 @@ mat-toolbar > span {
 }
 
 .container {
-  width: 400px;
-  margin: 0 25px 25px 0;
+  max-width: 1052px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -25px;
+  margin-right: -25px;
 }
 
 .list {
@@ -27,13 +35,7 @@ mat-toolbar > span {
   border-radius: 4px;
 }
 
-app-new-task {
-  margin-bottom: 30px;
-}
-
-.empty-label {
-  font-size: 2em;
-  padding-top: 10px;
-  text-align: center;
-  opacity: 0.2;
+app-album {
+  width: 300px;
+  margin: 0px 25px 20px;
 }

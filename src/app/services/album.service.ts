@@ -20,18 +20,17 @@ export class AlbumService {
   );
   albumRatings$ = this.albumRatingDB.valueChanges({ idField: 'id' });
 
-  albumsWithRatings$ = combineLatest([
-    this.albums$,
-    this.albumRatings$
-  ]).pipe(
+  albumsWithRatings$ = combineLatest([this.albums$, this.albumRatings$]).pipe(
     map(([albums, albumRatings]) => {
-      return albums.filter(a => !a.hidden).map((album) => {
-        const rating = albumRatings.find((r) => r.albumId === album.id);
-        return {
-          ...album,
-          rating: rating ? rating.rating : null,
-        };
-      });
+      return albums
+        .filter((a) => !a.hidden)
+        .map((album) => {
+          const rating = albumRatings.find((r) => r.albumId === album.id);
+          return {
+            ...album,
+            rating: rating ? rating.rating : null,
+          };
+        });
     })
   );
 
@@ -54,5 +53,11 @@ export class AlbumService {
 
   private getAlbumRatingId(userId: string, albumId: string) {
     return `${userId}-${albumId}`;
+  }
+
+  hideAlbum(album: Album) {
+    this.albumDB.doc(album.id).update({
+      hidden: true,
+    });
   }
 }

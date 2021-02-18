@@ -1,10 +1,17 @@
 <mat-toolbar color="primary">
-  <mat-icon>local_fire_department</mat-icon>
-  <span>Kanban Fire</span>
+  <mat-icon>library_music</mat-icon>
+  <span>New Music</span>
+  <span class="example-spacer"></span>
+  <mat-slide-toggle [(ngModel)]="hideRated">Hide Rated</mat-slide-toggle>
 </mat-toolbar>
 
 <div class="container-wrapper">
   <div class="container">
-    <app-album *ngFor="let album of albumsWithRatings$ | async" [album]="album"></app-album>
+    <ng-container *ngFor="let album of albumsWithRatings$ | async">
+      <app-album      
+        [album]="album"
+        *ngIf="!hideRated || !album.rating"
+      ></app-album>
+    </ng-container>
   </div>
 </div>
