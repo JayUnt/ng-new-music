@@ -1,3 +1,5 @@
+import { AlbumRating } from "./album-rating";
+
 export interface Album {
   id: string;
   name: string;
@@ -6,7 +8,6 @@ export interface Album {
   releaseMonth: number;
   releaseDay?: number;
   genres: string[];
-  rating?: number;
+  rating?: AlbumRating;
   hidden?: boolean;
-  favoriteSong?: string;
 }

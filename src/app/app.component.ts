@@ -38,8 +38,7 @@ export class AppComponent {
   }
 
   canShowAlbum(album: Album): boolean {
-
-    if (this.hideRated && !!album.rating) {
+    if (this.hideRated && album.rating && !!album.rating.rating) {
       return false;
     }
 

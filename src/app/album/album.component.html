@@ -1,5 +1,4 @@
-<mat-card class="item" (click)="rateAlbum()" [matBadge]="album.rating">
-  <!-- <pre>{{ album | json }}</pre> -->
+<mat-card class="item" (click)="rateAlbum()" [matBadge]="album.rating?.rating">
   <h2>{{ album.artist }}</h2>
   <h3>{{ album.name }}</h3>
 
@@ -9,5 +8,5 @@
     }}</mat-chip>
   </mat-chip-list>
 
-  <div *ngIf="album.favoriteSong"><b>Song:</b> {{ album.favoriteSong }}</div>
+  <div *ngIf="album.rating?.favoriteSong"><b>Song:</b> {{ album.rating?.favoriteSong }}</div>
 </mat-card>

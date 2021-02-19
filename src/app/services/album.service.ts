@@ -22,7 +22,6 @@ export class AlbumService {
   );
   albumRatings$ = this.albumRatingDB.valueChanges({ idField: 'id' });
 
-  
 
   albumsWithRatings$ = combineLatest([this.albums$, this.albumRatings$]).pipe(
     map(([albums, albumRatings]) => {
@@ -32,7 +31,7 @@ export class AlbumService {
           const rating = albumRatings.find((r) => r.albumId === album.id);
           return {
             ...album,
-            rating: rating ? rating.rating : null,
+            rating
           };
         });
     })
@@ -54,13 +53,13 @@ export class AlbumService {
     });
   }
 
-  updateAlbumRating(album: Album, rating: number) {
+  updateAlbumRating(album: Album, rating: AlbumRating) {
     const albumRatingId = this.getAlbumRatingId(USER_ID, album.id);
 
     this.albumRatingDB.doc(albumRatingId).set({
       userId: USER_ID,
       albumId: album.id,
-      rating,
+      ...rating,
     });
   }
 

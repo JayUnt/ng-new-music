@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { RateAlbumComponent } from '../rate-album/rate-album.component';
 import { Album } from '../models/album';
 import { EditAlbumComponent } from '../edit-album/edit-album.component';
 

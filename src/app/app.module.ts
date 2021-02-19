@@ -11,7 +11,6 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AlbumComponent } from './album/album.component';
-import { RateAlbumComponent } from './rate-album/rate-album.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddAlbumComponent } from './add-album/add-album.component';
 import { EditAlbumComponent } from './edit-album/edit-album.component';
@@ -21,7 +20,6 @@ import { MaterialModule } from './material/material.module';
   declarations: [
     AppComponent,
     AlbumComponent,
-    RateAlbumComponent,
     AddAlbumComponent,
     EditAlbumComponent,
   ],

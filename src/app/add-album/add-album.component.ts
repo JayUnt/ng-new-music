@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Album } from '../models/album';
+import { AlbumRating } from '../models/album-rating';
 import { AlbumService } from '../services/album.service';
 import { MatChipInputEvent } from '@angular/material/chips';
 
@@ -13,6 +14,7 @@ import { MatChipInputEvent } from '@angular/material/chips';
 export class AddAlbumComponent {
   album: Partial<Album> = {};
   rating: number;
+  favoriteSong: string;
 
   readonly separatorKeysCodes: number[] = [ENTER, COMMA];
 
@@ -30,10 +32,14 @@ export class AddAlbumComponent {
       releaseMonth: this.album.releaseMonth,
       releaseDay: this.album.releaseDay,
       genres: this.album.genres,
-      favoriteSong: this.album.favoriteSong,
     };
     this.albumService.updateAlbum(a);
-    this.albumService.updateAlbumRating(a, this.rating);
+
+    const rating: AlbumRating = { rating: this.rating };
+    if (!!this.favoriteSong) {
+      rating.favoriteSong = this.favoriteSong;
+    }
+    this.albumService.updateAlbumRating(a, rating);
     this.dialogRef.close();
   }
 
