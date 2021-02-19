@@ -3,31 +3,31 @@
     <div class="mdc-layout-grid__cell">
       <mat-form-field>
         <mat-label>Artist</mat-label>
-        <input matInput cdkFocusInitial [(ngModel)]="album.artist" />
+        <input matInput [(ngModel)]="album.artist" />
       </mat-form-field>
     </div>
     <div class="mdc-layout-grid__cell">
       <mat-form-field>
         <mat-label>Title</mat-label>
-        <input matInput cdkFocusInitial [(ngModel)]="album.name" />
+        <input matInput [(ngModel)]="album.name" />
       </mat-form-field>
     </div>
     <div class="mdc-layout-grid__cell">
       <mat-form-field>
         <mat-label>Year</mat-label>
-        <input matInput cdkFocusInitial [(ngModel)]="album.releaseYear" />
+        <input matInput [(ngModel)]="album.releaseYear" />
       </mat-form-field>
     </div>
     <div class="mdc-layout-grid__cell">
       <mat-form-field>
         <mat-label>Month</mat-label>
-        <input matInput cdkFocusInitial [(ngModel)]="album.releaseMonth" />
+        <input matInput [(ngModel)]="album.releaseMonth" />
       </mat-form-field>
     </div>
     <div class="mdc-layout-grid__cell">
       <mat-form-field>
         <mat-label>Day</mat-label>
-        <input matInput cdkFocusInitial [(ngModel)]="album.releaseDay" />
+        <input matInput [(ngModel)]="album.releaseDay" />
       </mat-form-field>
     </div>
 
@@ -58,10 +58,16 @@
     <div class="mdc-layout-grid__cell">
       <mat-form-field>
         <mat-label>Rating</mat-label>
-        <input matInput cdkFocusInitial [(ngModel)]="rating" number />
+        <input matInput [(ngModel)]="rating" number />
       </mat-form-field>
-
     </div>
+    <div class="mdc-layout-grid__cell">
+      <mat-form-field>
+        <mat-label>Favorite Song</mat-label>
+        <input matInput [(ngModel)]="album.favoriteSong" />
+      </mat-form-field>
+    </div>
+
   </div>
 </div>
 

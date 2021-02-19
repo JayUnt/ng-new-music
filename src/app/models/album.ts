@@ -8,4 +8,5 @@ export interface Album {
   genres: string[];
   rating?: number;
   hidden?: boolean;
+  favoriteSong?: string;
 }

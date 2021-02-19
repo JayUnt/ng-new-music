@@ -8,16 +8,6 @@ import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { MatCardModule } from '@angular/material/card';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { MatChipsModule } from '@angular/material/chips';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { MatBadgeModule } from '@angular/material/badge';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AlbumComponent } from './album/album.component';
@@ -25,6 +15,7 @@ import { RateAlbumComponent } from './rate-album/rate-album.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddAlbumComponent } from './add-album/add-album.component';
 import { EditAlbumComponent } from './edit-album/edit-album.component';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -43,15 +34,7 @@ import { EditAlbumComponent } from './edit-album/edit-album.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
 
-    MatToolbarModule,
-    MatIconModule,
-    MatCardModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatInputModule,
-    MatChipsModule,
-    MatSlideToggleModule,
-    MatBadgeModule,
+    MaterialModule,
 
     AppRoutingModule,
   ],

@@ -30,6 +30,7 @@ export class AddAlbumComponent {
       releaseMonth: this.album.releaseMonth,
       releaseDay: this.album.releaseDay,
       genres: this.album.genres,
+      favoriteSong: this.album.favoriteSong,
     };
     this.albumService.updateAlbum(a);
     this.albumService.updateAlbumRating(a, this.rating);
