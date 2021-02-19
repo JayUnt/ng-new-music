@@ -16,7 +16,8 @@ const saveAlbums = async (albums) => {
 
   albums.forEach(album => {
     const albumRef = albumDB.doc(album.id);
-    batch.set(albumRef, album);
+    
+    batch.set(albumRef, album, {merge: true});
   })
   
   // Commit the batch

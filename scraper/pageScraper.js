@@ -60,61 +60,55 @@ const mergeAlbums = (albums) => {
 const scraperObject = {
 
   async scrapePage(browser, year, month, genre) {
-    return new Promise(async (resolve, reject) => {
-      const url = getApiUrl(year, month, genre);
+    const url = getApiUrl(year, month, genre);
 
-      let page = await browser.newPage();
-      console.log(`Navigating to ${url}...`);
+    let page = await browser.newPage();
+    console.log(`Navigating to ${url}...`);
 
-      // Navigate to the selected page
-      await page.goto(url);
+    // Navigate to the selected page
+    await page.goto(url);
 
-      // Wait for the required DOM to be rendered
-      await page.waitForSelector('.facetContent');
+    // Wait for the required DOM to be rendered
+    await page.waitForSelector('.facetContent');
 
-      // Get all of the albums
-      const albums = await page.$$eval('.albumBlock', (albumBlocks, genre) => {
+    // Get all of the albums
+    return await page.$$eval('.albumBlock', (albumBlocks, genre) => {
 
-        const albumData = albumBlocks.map(albumBlock => {
-          // const siteScore = albumBlock.querySelector('.ratingRow .rating:last-child').textContent;
+      const albumData = albumBlocks.map(albumBlock => {
+        // const siteScore = albumBlock.querySelector('.ratingRow .rating:last-child').textContent;
 
-          const releaseDateStr = albumBlock.querySelector('.date').textContent;
-          const d = new Date(`${releaseDateStr}, 2021`);
-          return {
-            artist: albumBlock.querySelector('.artistTitle').textContent.trim(),
-            name: albumBlock.querySelector('.albumTitle').textContent.trim(),
-            releaseYear: d.getFullYear(),
-            releaseMonth: d.getMonth() + 1,
-            releaseDay: d.getDay(),
-            // siteScore, 
-            genres: [genre.name],
-          }
-        });
+        const releaseDateStr = albumBlock.querySelector('.date').textContent;
+        const d = new Date(`${releaseDateStr}, 2021`);
+        return {
+          artist: albumBlock.querySelector('.artistTitle').textContent.trim(),
+          name: albumBlock.querySelector('.albumTitle').textContent.trim(),
+          releaseYear: d.getFullYear(),
+          releaseMonth: d.getMonth() + 1,
+          releaseDay: d.getDay(),
+          // siteScore, 
+          genres: [genre.name],
+        }
+      });
 
-        return albumData;
-      }, genre);
-
-      resolve(albums);
-    });
+      return albumData;
+    }, genre);
   },
   async scraper(browser) {
-    const scrapers = [];
-
-    //scrapers.push(this.scrapePage(browser, 2021, 2, genres[0]));
-
     const numMonths = 2;
     let currDate = new Date();
     currDate.setDate(1);
 
-    for (let c = 1; c <= numMonths; c++) {
-      genres.forEach(genre => {
-        scrapers.push(this.scrapePage(browser, currDate.getFullYear(), currDate.getMonth() + 1, genre));
-      })
-
+    let albums = [];
+    let genre;
+    for (let month = 1; month <= numMonths; month++) {
+      for (let g = 0; g < genres.length; g++) {
+        genre = genres[g];
+        albums.push(await this.scrapePage(browser, currDate.getFullYear(), currDate.getMonth() + 1, genre));
+      }
+      
       currDate.setMonth(currDate.getMonth() - 1);
     }
 
-    let albums = await Promise.all(scrapers);
     albums = [].concat.apply([], albums);
     albums = mergeAlbums(albums);
 
