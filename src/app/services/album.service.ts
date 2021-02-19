@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { combineLatest } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Album } from '../models/album';
@@ -12,6 +12,8 @@ const USER_ID = '3eWtaN2ITkecZCzL1Z0M';
   providedIn: 'root',
 })
 export class AlbumService {
+  allGenres: string[];
+
   albumDB = this.store.collection<Album>('albums');
   albums$ = this.albumDB.valueChanges({ idField: 'id' });
 
@@ -19,6 +21,8 @@ export class AlbumService {
     ref.where('userId', '==', USER_ID)
   );
   albumRatings$ = this.albumRatingDB.valueChanges({ idField: 'id' });
+
+  
 
   albumsWithRatings$ = combineLatest([this.albums$, this.albumRatings$]).pipe(
     map(([albums, albumRatings]) => {

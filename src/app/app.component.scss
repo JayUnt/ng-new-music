@@ -10,6 +10,26 @@ mat-toolbar > span {
   flex: 1 1 auto;
 }
 
+
+.sidenav {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  .sidenav-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  mat-slide-toggle {
+    padding-left: 10px;
+  }
+
+  mat-chip {
+    margin-top: 5px;
+  }
+}
+
+
 .content-wrapper {
   max-width: 1400px;
   margin: auto;
@@ -22,17 +42,14 @@ mat-toolbar > span {
 
 .container {
   max-width: 1052px;
+}
+
+.albums-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-left: -25px;
   margin-right: -25px;
-}
-
-.list {
-  border: solid 1px #ccc;
-  min-height: 60px;
-  border-radius: 4px;
 }
 
 app-album {

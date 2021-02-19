@@ -2,18 +2,55 @@
   <mat-icon>library_music</mat-icon>
   <span>New Music</span>
   <span class="example-spacer"></span>
-  
+
   <button mat-button (click)="addAlbum()">Add Album</button>
-  <mat-slide-toggle [(ngModel)]="hideRated">Hide Rated</mat-slide-toggle>
 </mat-toolbar>
 
-<div class="container-wrapper">
-  <div class="container">
-    <ng-container *ngFor="let album of albumsWithRatings$ | async">
-      <app-album      
-        [album]="album"
-        *ngIf="!hideRated || !album.rating"
-      ></app-album>
-    </ng-container>
+<mat-drawer-container autosize>
+  <mat-drawer #drawer class="sidenav" mode="side">
+    <div class="sidenav-item">
+      <mat-slide-toggle [(ngModel)]="hideRated">Hide Rated</mat-slide-toggle>
+    </div>
+    <div class="sidenav-item">
+      <mat-form-field appearance="fill">
+        <mat-label>Filter on Genre</mat-label>
+        <mat-select (selectionChange)="addGenre($event)">
+          <mat-option>Select One</mat-option>
+          <mat-option *ngFor="let genre of filterableGenres" [value]="genre">
+            {{ genre }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>    
+      <div *ngFor="let genre of showGenres">
+        <mat-chip
+          [selectable]="false"
+          [removable]="true"
+          (removed)="removeGenre(genre)"
+        >
+          {{ genre }}
+          <mat-icon matChipRemove>cancel</mat-icon>
+        </mat-chip>
+      </div>
+    </div>
+  </mat-drawer>
+
+  <div class="container-wrapper">
+    <div class="container">
+      <ng-container
+        *ngIf="albumsWithRatings$ | async as albumsWithRatings; else loading"
+      >
+        <button type="button" mat-button (click)="drawer.toggle()">
+          Filters
+        </button>
+
+        <div class="albums-list">
+          <ng-container *ngFor="let album of albumsWithRatings">
+            <app-album [album]="album" *ngIf="canShowAlbum(album)"></app-album>
+          </ng-container>
+        </div>
+      </ng-container>
+
+      <ng-template #loading><mat-spinner></mat-spinner></ng-template>
+    </div>
   </div>
-</div>
+</mat-drawer-container>
