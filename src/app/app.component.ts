@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges, SimpleChanges } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSelect, MatSelectChange } from '@angular/material/select';
 import { tap } from 'rxjs/operators';
@@ -14,6 +14,7 @@ import { AlbumService } from './services/album.service';
 })
 export class AppComponent {
   currentUserId = '3eWtaN2ITkecZCzL1Z0M';
+  stringFilter;
   hideRated = false;
 
   allGenres = [];
@@ -21,17 +22,21 @@ export class AppComponent {
   showGenres = [];
 
   albumsWithRatings$ = this.albumService.albumsWithRatings$.pipe(
-    tap(albums => {
+    tap((albums) => {
       // Get only the genres arrays as an array
-      const albumGenres = albums.map(a => a.genres);
+      const albumGenres = albums.map((a) => a.genres);
 
       // Flatten genre arrays and get distinct values
       this.allGenres = [...new Set([].concat.apply([], albumGenres))];
       this.updateFilterableGenres();
     })
-  )
+  );
 
   constructor(private albumService: AlbumService, private dialog: MatDialog) {}
+
+  filterString(event) {
+    this.stringFilter = event.target.value;
+  }
 
   addAlbum(): void {
     this.dialog.open(AddAlbumComponent);
@@ -46,11 +51,24 @@ export class AppComponent {
       return false;
     }
 
+    if (!!this.stringFilter && !this.albumStartsWithStringFilter(album)) {
+      return false;
+    }
+
     return true;
   }
 
   private albumHasShownGenre(album: Album) {
-    return this.showGenres.filter(value => album.genres.includes(value)).length > 0;
+    return (
+      this.showGenres.filter((value) => album.genres.includes(value)).length > 0
+    );
+  }
+
+  private albumStartsWithStringFilter(album: Album) {
+    return (
+      album.name.startsWith(this.stringFilter) ||
+      album.artist.startsWith(this.stringFilter)
+    );
   }
 
   addGenre(event: MatSelectChange) {
@@ -66,11 +84,13 @@ export class AppComponent {
   }
 
   removeGenre(genre) {
-    this.showGenres = this.showGenres.filter(g => g !== genre);
+    this.showGenres = this.showGenres.filter((g) => g !== genre);
     this.updateFilterableGenres();
   }
 
-  updateFilterableGenres(){
-    this.filterableGenres = this.allGenres.filter(g => !this.showGenres.includes(g));
+  updateFilterableGenres() {
+    this.filterableGenres = this.allGenres.filter(
+      (g) => !this.showGenres.includes(g)
+    );
   }
 }

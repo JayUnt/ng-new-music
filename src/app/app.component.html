@@ -9,6 +9,12 @@
 <mat-drawer-container autosize>
   <mat-drawer #drawer class="sidenav" mode="side">
     <div class="sidenav-item">
+      <mat-form-field>
+        <mat-label>Artist/Name</mat-label>
+        <input matInput (keyup)="filterString($event)" />
+      </mat-form-field>
+    </div>
+    <div class="sidenav-item">
       <mat-slide-toggle [(ngModel)]="hideRated">Hide Rated</mat-slide-toggle>
     </div>
     <div class="sidenav-item">
