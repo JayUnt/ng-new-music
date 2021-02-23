@@ -1,5 +1,7 @@
-mat-toolbar {
-  margin-bottom: 20px;
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 mat-toolbar > span {
@@ -8,6 +10,10 @@ mat-toolbar > span {
 
 .example-spacer {
   flex: 1 1 auto;
+}
+
+mat-drawer-container {
+  flex: 1 1 100%;
 }
 
 
@@ -29,19 +35,13 @@ mat-toolbar > span {
   }
 }
 
+.container {
+  margin-top: 20px;
+}
 
 .content-wrapper {
   max-width: 1400px;
   margin: auto;
-}
-
-.container-wrapper {
-  display: flex;
-  justify-content: space-around;
-}
-
-.container {
-  max-width: 1052px;
 }
 
 .albums-list {
@@ -55,4 +55,9 @@ mat-toolbar > span {
 app-album {
   width: 300px;
   margin: 0px 25px 20px;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
 }

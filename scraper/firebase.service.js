@@ -10,6 +10,7 @@ const db = admin.firestore();
 
 
 const saveAlbums = async (albums) => {
+  console.log('Saving Albums');
   const albumDB = await db.collection('albums');
 
   const batch = db.batch();
@@ -22,6 +23,7 @@ const saveAlbums = async (albums) => {
   
   // Commit the batch
   await batch.commit();
+  console.log('Saving complete');
 }
 
 module.exports = saveAlbums;

@@ -32,6 +32,7 @@ export class AddAlbumComponent {
       releaseMonth: this.album.releaseMonth,
       releaseDay: this.album.releaseDay,
       genres: this.album.genres,
+      spotifyLink: this.album.spotifyLink,
     };
     this.albumService.updateAlbum(a);
 

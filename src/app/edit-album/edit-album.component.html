@@ -57,6 +57,13 @@
     
     <div class="mdc-layout-grid__cell">
       <mat-form-field>
+        <mat-label>Spotify Link</mat-label>
+        <input matInput [(ngModel)]="album.spotifyLink" />
+      </mat-form-field>
+    </div>
+    
+    <div class="mdc-layout-grid__cell">
+      <mat-form-field>
         <mat-label>Rating</mat-label>
         <input matInput [(ngModel)]="rating" number />
       </mat-form-field>

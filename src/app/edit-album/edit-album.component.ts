@@ -42,6 +42,7 @@ export class EditAlbumComponent implements OnInit {
       releaseMonth: this.album.releaseMonth,
       releaseDay: this.album.releaseDay,
       genres: this.album.genres,
+      spotifyLink: this.album.spotifyLink,
     };
     this.albumService.updateAlbum(a);
 

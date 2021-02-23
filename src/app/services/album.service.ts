@@ -22,19 +22,21 @@ export class AlbumService {
   );
   albumRatings$ = this.albumRatingDB.valueChanges({ idField: 'id' });
 
-
+  cacheAlbumsWithRatings;
   albumsWithRatings$ = combineLatest([this.albums$, this.albumRatings$]).pipe(
     map(([albums, albumRatings]) => {
       return albums
         .filter((a) => !a.hidden)
         .map((album) => {
           const rating = albumRatings.find((r) => r.albumId === album.id);
+
           return {
             ...album,
             rating
           };
         });
-    })
+    }),
+    tap(albumsWithRatings => this.cacheAlbumsWithRatings = albumsWithRatings)
   );
 
   constructor(private store: AngularFirestore) {}
@@ -76,5 +78,9 @@ export class AlbumService {
 
   private getAlbumRatingId(userId: string, albumId: string) {
     return `${userId}-${albumId}`;
+  }
+
+  getLatestAlbums() {
+    return this.cacheAlbumsWithRatings;
   }
 }

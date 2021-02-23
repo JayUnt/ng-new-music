@@ -8,6 +8,7 @@ export interface Album {
   releaseMonth: number;
   releaseDay?: number;
   genres: string[];
+  spotifyLink?: string;
   rating?: AlbumRating;
   hidden?: boolean;
 }

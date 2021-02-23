@@ -20,6 +20,7 @@ export class AppComponent {
   allGenres = [];
   filterableGenres = [];
   showGenres = [];
+  albumId: string;
 
   albumsWithRatings$ = this.albumService.albumsWithRatings$.pipe(
     tap((albums) => {
@@ -43,6 +44,11 @@ export class AppComponent {
   }
 
   canShowAlbum(album: Album): boolean {
+    // if albumId is set, ignore all other filters
+    if (this.albumId) {
+      return album.id === this.albumId;
+    }
+
     if (this.hideRated && album.rating && !!album.rating.rating) {
       return false;
     }
@@ -65,9 +71,10 @@ export class AppComponent {
   }
 
   private albumStartsWithStringFilter(album: Album) {
+    const strFilter = this.stringFilter.toLowerCase();
     return (
-      album.name.startsWith(this.stringFilter) ||
-      album.artist.startsWith(this.stringFilter)
+      album.name.toLowerCase().startsWith(strFilter) ||
+      album.artist.toLowerCase().startsWith(this.stringFilter)
     );
   }
 
@@ -92,5 +99,20 @@ export class AppComponent {
     this.filterableGenres = this.allGenres.filter(
       (g) => !this.showGenres.includes(g)
     );
+  }
+
+  toggleRandomUnratedAlbum({ checked }) {
+    if (checked) {
+      this.setRandomUnratedAlbum();
+    } else {
+      this.albumId = null;
+    }
+  }
+
+  setRandomUnratedAlbum() {
+    const albums = this.albumService.getLatestAlbums();
+    const unrated = albums.filter((a) => !a.rating);
+    const random = unrated[Math.floor(Math.random() * unrated.length)];
+    this.albumId = random.id;
   }
 }
