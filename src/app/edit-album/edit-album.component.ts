@@ -34,7 +34,7 @@ export class EditAlbumComponent implements OnInit {
   }
 
   submit(): void {
-    const a: Album = {
+    const album: Album = {
       id: this.album.id,
       name: this.album.name,
       artist: this.album.artist,
@@ -42,15 +42,16 @@ export class EditAlbumComponent implements OnInit {
       releaseMonth: this.album.releaseMonth,
       releaseDay: this.album.releaseDay,
       genres: this.album.genres,
-      spotifyLink: this.album.spotifyLink,
+      spotifyLink: this.album.spotifyLink || '',
     };
-    this.albumService.updateAlbum(a);
+    this.albumService.updateAlbum(album);
 
-    const rating: AlbumRating = { rating: this.rating };
-    if (!!this.favoriteSong) {
-      rating.favoriteSong = this.favoriteSong;
-    }
-    this.albumService.updateAlbumRating(a, rating);
+    const albumRating: AlbumRating = {
+      rating: this.rating,
+      favoriteSong: this.favoriteSong,
+    };
+    this.albumService.updateAlbumRating(album, albumRating);
+
     this.dialogRef.close();
   }
 

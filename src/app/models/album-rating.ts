@@ -1,6 +1,6 @@
 export interface AlbumRating {
   albumId?: string;
   userId?: string;
-  rating: number;  
+  rating?: number;  
   favoriteSong?: string;
 }

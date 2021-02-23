@@ -32,11 +32,13 @@ export class AlbumService {
 
           return {
             ...album,
-            rating
+            rating,
           };
         });
     }),
-    tap(albumsWithRatings => this.cacheAlbumsWithRatings = albumsWithRatings)
+    tap(
+      (albumsWithRatings) => (this.cacheAlbumsWithRatings = albumsWithRatings)
+    )
   );
 
   constructor(private store: AngularFirestore) {}
@@ -57,12 +59,16 @@ export class AlbumService {
 
   updateAlbumRating(album: Album, rating: AlbumRating) {
     const albumRatingId = this.getAlbumRatingId(USER_ID, album.id);
-
-    this.albumRatingDB.doc(albumRatingId).set({
-      userId: USER_ID,
-      albumId: album.id,
-      ...rating,
-    });
+debugger;
+    if (!rating.rating && !rating.favoriteSong) {
+      this.albumRatingDB.doc(albumRatingId).delete();
+    } else {
+      this.albumRatingDB.doc(albumRatingId).set({
+        userId: USER_ID,
+        albumId: album.id,
+        ...rating,
+      });
+    }
   }
 
   deleteAlbumRating(album: Album) {
@@ -71,9 +77,11 @@ export class AlbumService {
   }
 
   private getAlbumId(album: Album) {
-    const formatStr = (str) => str.replace(/[\W_]+/g, "_").toUpperCase();
+    const formatStr = (str) => str.replace(/[\W_]+/g, '_').toUpperCase();
 
-    return `${album.releaseYear}-${formatStr(album.artist)}-${formatStr(album.name)}`;
+    return `${album.releaseYear}-${formatStr(album.artist)}-${formatStr(
+      album.name
+    )}`;
   }
 
   private getAlbumRatingId(userId: string, albumId: string) {
