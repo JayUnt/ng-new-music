@@ -59,15 +59,24 @@ export class AlbumService {
 
   updateAlbumRating(album: Album, rating: AlbumRating) {
     const albumRatingId = this.getAlbumRatingId(USER_ID, album.id);
-debugger;
+
     if (!rating.rating && !rating.favoriteSong) {
       this.albumRatingDB.doc(albumRatingId).delete();
     } else {
-      this.albumRatingDB.doc(albumRatingId).set({
+      const newRating: AlbumRating = {
         userId: USER_ID,
         albumId: album.id,
-        ...rating,
-      });
+      };
+
+      if (!!rating.rating) {
+        newRating.rating = rating.rating;
+      }
+
+      if (!!rating.favoriteSong) {
+        newRating.favoriteSong = rating.favoriteSong;
+      }
+
+      this.albumRatingDB.doc(albumRatingId).set(newRating);
     }
   }
 
