@@ -80,7 +80,7 @@ export class AppComponent {
     const strFilter = this.stringFilter.toLowerCase();
     return (
       album.name.toLowerCase().startsWith(strFilter) ||
-      album.artist.toLowerCase().startsWith(this.stringFilter)
+      album.artist.toLowerCase().startsWith(strFilter)
     );
   }
 
