@@ -33,17 +33,26 @@ export class EditAlbumComponent implements OnInit {
     }
   }
 
-  submit(): void {
+  getUpdatedAlbum(newAlbum) {
     const album: Album = {
-      id: this.album.id,
-      name: this.album.name,
-      artist: this.album.artist,
-      releaseYear: this.album.releaseYear,
-      releaseMonth: this.album.releaseMonth,
-      releaseDay: this.album.releaseDay,
-      genres: this.album.genres,
-      spotifyLink: this.album.spotifyLink || '',
+      ...this.data.album,
+      ...newAlbum,
+      spotifyLink: newAlbum.spotifyLink || this.album.spotifyLink || '',
     };
+
+    return album;
+  }
+
+  hideAlbum(): void {
+    const album = this.getUpdatedAlbum({ hidden: true });
+    console.log(album);
+    this.albumService.updateAlbum(album);
+
+    this.dialogRef.close();
+  }
+
+  submit(): void {
+    const album = this.getUpdatedAlbum(this.album);
     this.albumService.updateAlbum(album);
 
     const albumRating: AlbumRating = {

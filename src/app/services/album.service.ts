@@ -24,17 +24,19 @@ export class AlbumService {
 
   cacheAlbumsWithRatings;
   albumsWithRatings$ = combineLatest([this.albums$, this.albumRatings$]).pipe(
-    map(([albums, albumRatings]) => {
-      return albums
-        .filter((a) => !a.hidden)
-        .map((album) => {
-          const rating = albumRatings.find((r) => r.albumId === album.id);
+    map(([albums, albumRatings]): Album[] => {
+      return (
+        albums
+          // .filter((a) => !a.hidden)
+          .map((album) => {
+            const rating = albumRatings.find((r) => r.albumId === album.id);
 
-          return {
-            ...album,
-            rating,
-          };
-        });
+            return {
+              ...album,
+              rating,
+            };
+          })
+      );
     }),
     tap(
       (albumsWithRatings) => (this.cacheAlbumsWithRatings = albumsWithRatings)

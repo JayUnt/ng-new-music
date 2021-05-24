@@ -1,6 +1,7 @@
 <mat-card class="item" (click)="rateAlbum()" [matBadge]="album.rating?.rating">
   <h2>{{ album.artist }}</h2>
   <h3>{{ album.name }}</h3>
+  <div>{{ album.releaseMonth }}/{{ album.releaseYear }}</div>
 
   <mat-chip-list aria-label="Genres">
     <mat-chip *ngFor="let genre of album.genres" disabled readonly>{{
@@ -8,5 +9,7 @@
     }}</mat-chip>
   </mat-chip-list>
 
-  <div *ngIf="album.rating?.favoriteSong"><b>Song:</b> {{ album.rating?.favoriteSong }}</div>
+  <div *ngIf="album.rating?.favoriteSong">
+    <b>Song:</b> {{ album.rating?.favoriteSong }}
+  </div>
 </mat-card>

@@ -12,6 +12,8 @@
         <input matInput [(ngModel)]="album.name" />
       </mat-form-field>
     </div>
+  </div>
+  <div class="mdc-layout-grid__inner">
     <div class="mdc-layout-grid__cell">
       <mat-form-field>
         <mat-label>Year</mat-label>
@@ -30,7 +32,8 @@
         <input matInput [(ngModel)]="album.releaseDay" />
       </mat-form-field>
     </div>
-
+  </div>
+  <div class="mdc-layout-grid__inner">
     <div class="mdc-layout-grid__cell">
       <mat-form-field class="example-chip-list">
         <mat-label>Genres</mat-label>
@@ -54,27 +57,34 @@
         </mat-chip-list>
       </mat-form-field>
     </div>
-    
+  </div>
+  <div class="mdc-layout-grid__inner">
     <div class="mdc-layout-grid__cell">
       <mat-form-field>
         <mat-label>Spotify Link</mat-label>
         <input matInput [(ngModel)]="album.spotifyLink" />
       </mat-form-field>
     </div>
-    
+
     <div class="mdc-layout-grid__cell">
       <mat-form-field>
         <mat-label>Rating</mat-label>
         <input matInput [(ngModel)]="rating" number />
       </mat-form-field>
     </div>
-    
+  </div>
+  <div class="mdc-layout-grid__inner">
     <div class="mdc-layout-grid__cell">
       <mat-form-field>
         <mat-label>Favorite Song</mat-label>
         <input matInput [(ngModel)]="favoriteSong" />
       </mat-form-field>
     </div>
+  </div>
+  <div class="mdc-layout-grid__cell">
+    <button mat-raised-button color="primary" (click)="hideAlbum()">
+      Hide Album
+    </button>
   </div>
 </div>
 

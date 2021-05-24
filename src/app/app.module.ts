@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { SETTINGS as FIRESTORE_SETTINGS } from '@angular/fire/firestore';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,7 +37,12 @@ import { MaterialModule } from './material/material.module';
 
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: FIRESTORE_SETTINGS,
+      useValue: { ignoreUndefinedProperties: true },
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

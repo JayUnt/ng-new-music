@@ -16,6 +16,7 @@ export class AppComponent {
   currentUserId = '3eWtaN2ITkecZCzL1Z0M';
   stringFilter;
   hideRated = false;
+  showHidden = false;
 
   allGenres = [];
   filterableGenres = [];
@@ -49,15 +50,20 @@ export class AppComponent {
       return album.id === this.albumId;
     }
 
+    // String filter ignores all other filters
+    if (!!this.stringFilter && !this.albumStartsWithStringFilter(album)) {
+      return false;
+    }
+
+    if (!this.showHidden && !!album.hidden) {
+      return false;
+    }
+
     if (this.hideRated && album.rating && !!album.rating.rating) {
       return false;
     }
 
     if (this.showGenres.length > 0 && !this.albumHasShownGenre(album)) {
-      return false;
-    }
-
-    if (!!this.stringFilter && !this.albumStartsWithStringFilter(album)) {
       return false;
     }
 
