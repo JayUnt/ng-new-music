@@ -1,0 +1,237 @@
+{
+  "genres": [
+    {
+      "type": "genre",
+      "id": "g.116",
+      "name": "Celtic Folk",
+      "href": "https://api.napster.com/v2.2/genres/g.116",
+      "shortcut": "folk/celtic-folk",
+      "description": "Folk music with a Celtic flavor weaves together traditional instrumentation to create an emotive sound that harks back to ancient Scottish, Irish & Welsh cultures. Singer-Songwriter <a href=\"http://www.rhapsody.com/artist/dougie-maclean\">Dougie MacLean</a>, vocalist <a href=\"http://www.rhapsody.com/artist/dolores-keane\">Dolores Keane</a> and traditional Scottish folksingers <a href=\"http://www.rhapsody.com/artist/the-fisher-family\">The Fisher Family</a> each maintain a strong Celtic spirit in their recordings. Though each region maintains a distinctive sound in terms of melody and vocal style, all artists composing Celtic Folk share a common connection in their music that reveals a deep reverence for their country's heritage.",
+      "links": {
+        "parentGenres": {
+          "ids": ["g.446"],
+          "href": "https://api.napster.com/v2.2/genres/g.446"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.117",
+      "name": "Field Recordings",
+      "href": "https://api.napster.com/v2.2/genres/g.117",
+      "shortcut": "folk/field-recordings",
+      "description": "Field Recordings are recordings made of regional folksingers, folk groups, and families, with the purpose of preserving a folk culture that hasn't quite reached a commercial place in the modern music industry. Folklorists such as <a href=\"http://www.rhapsody.com/artist/alan-lomax\">Alan Lomax</a> and Harry Smith have preserved hours of recordings of blues tunes, Appalachian folk ballads and even more obscure audio artifacts. Don't expect high fidelity; rather listen for strains of forgotten or ignored musical styles, and lyrics dealing with rural and country life.",
+      "links": {
+        "parentGenres": {
+          "ids": ["g.446"],
+          "href": "https://api.napster.com/v2.2/genres/g.446"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.118",
+      "name": "Folk Revival",
+      "href": "https://api.napster.com/v2.2/genres/g.118",
+      "shortcut": "folk/folk-revival",
+      "description": "Folk Revival arose with a sudden resurgence of folk music in the late 1950s. Folk heroines <a href=\"http://www.rhapsody.com/artist/joan-baez\">Joan Baez</a> and <a href=\"http://www.rhapsody.com/artist/joni-mitchell\">Joni Mitchell</a> led the charge with their remakes of classic songs with a new pop sensibility. <a href=\"http://www.rhapsody.com/artist/pete-seeger\">Pete Seeger</a> and <a href=\"http://www.rhapsody.com/artist/the-weavers\">The Weavers</a> were also influential, until the British Invasion of the mid-'60s eclipsed the movement.",
+      "links": {
+        "parentGenres": {
+          "ids": ["g.446"],
+          "href": "https://api.napster.com/v2.2/genres/g.446"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.147",
+      "name": "Political Folk & Protest Songs",
+      "href": "https://api.napster.com/v2.2/genres/g.147",
+      "shortcut": "folk/political-folk-and-protest-songs",
+      "description": "Folk music quite often takes on the establishment or espouses a certain political agenda. In the 1960s, artists such as <a href=\"http://www.rhapsody.com/artist/bob-dylan\">Bob Dylan</a> and <a href=\"http://www.rhapsody.com/artist/phil-ochs\">Phil Ochs</a> recorded blistering indictments of cultural and political forces; \"Blowin' in the Wind\" and \"I Ain't Marching Anymore\" are two of the most representative songs. Today, artists like folk-poet <a href=\"http://www.rhapsody.com/artist/billy-bragg\">Billy Bragg</a> and DIY icon <a href=\"http://www.rhapsody.com/artist/ani-difranco\">Ani DiFranco</a> continue to address society's ills through lyrics and guitar.",
+      "links": {
+        "parentGenres": {
+          "ids": ["g.446"],
+          "href": "https://api.napster.com/v2.2/genres/g.446"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.148",
+      "name": "New Folk",
+      "href": "https://api.napster.com/v2.2/genres/g.148",
+      "shortcut": "folk/new-folk",
+      "description": "New Folk refers to the music of folk artists who, partly inspired by <a href=\"http://www.rhapsody.com/artist/bob-dylan\">Bob Dylan's</a> shift away from political songwriting, moved away from the activist, draft-dodging set and started writing about personal experiences and daily life. This includes the likes of <a href=\"http://www.rhapsody.com/artist/suzanne-vega\">Suzanne Vega</a>, <a href=\"http://www.rhapsody.com/artist/shawn-colvin\">Shawn Colvin</a>, <a href=\"http://www.rhapsody.com/artist/billy-bragg\">Billy Bragg</a>, and <a href=\"http://www.rhapsody.com/artist/the-roches\">The Roches</a>. New Folk encompasses those who approach acoustic-oriented music as heartfelt personal expression.",
+      "links": {
+        "childGenres": {
+          "ids": ["g.149"],
+          "href": "https://api.napster.com/v2.2/genres/g.149"
+        },
+        "parentGenres": {
+          "ids": ["g.446"],
+          "href": "https://api.napster.com/v2.2/genres/g.446"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.150",
+      "name": "Scottish Folk",
+      "href": "https://api.napster.com/v2.2/genres/g.150",
+      "shortcut": "folk/scottish-folk",
+      "description": "Scottish Traditional Folk music is embodied by the work of folksingers like <a href=\"http://www.rhapsody.com/artist/dick-gaughan\">Dick Gaughan</a>, and groups like <a href=\"http://www.rhapsody.com/artist/boys-of-the-lough\">Boys of the Lough</a>. The sound is much like other Celtic Folk, and is based around fiddles, guitars and of course, the bagpipe.",
+      "links": {
+        "parentGenres": {
+          "ids": ["g.446"],
+          "href": "https://api.napster.com/v2.2/genres/g.446"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.151",
+      "name": "Traditional Folk",
+      "href": "https://api.napster.com/v2.2/genres/g.151",
+      "shortcut": "folk/traditional-folk",
+      "description": "The root of all contemporary folk styles, Traditional Folk is the American populist style of the early and mid-twentieth century. Led by <a href=\"http://www.rhapsody.com/artist/woody-guthrie\">Woody Guthrie</a>, the most influential folk musician of the century, Traditional Folk focused more on broad-ranging social issues than on the personal lyrical concerns of folkie-turned-rocker <a href=\"http://www.rhapsody.com/artist/bob-dylan\">Bob Dylan</a>.",
+      "links": {
+        "parentGenres": {
+          "ids": ["g.446"],
+          "href": "https://api.napster.com/v2.2/genres/g.446"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.206",
+      "name": "Medieval",
+      "href": "https://api.napster.com/v2.2/genres/g.206",
+      "shortcut": "folk/medieval",
+      "description": "Medieval folk is inspired by the songs of Renaissance and Middle Ages-era bards & minstrels. Many Medieval folk artists write their own material to approximate the song style of the genre, others simply cover traditional Medieval songs. Lyrical content is saturated in folklore and usually accompanied by traditional instruments of the Middle Ages.",
+      "links": {
+        "parentGenres": {
+          "ids": ["g.446"],
+          "href": "https://api.napster.com/v2.2/genres/g.446"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.207",
+      "name": "Renaissance",
+      "href": "https://api.napster.com/v2.2/genres/g.207",
+      "shortcut": "folk/renaissance",
+      "description": "Simpler than medieval rhythms and melodies, Renaissance music (1450-1600) utilized less complex harmonies and was greatly influenced by the push toward secular art.",
+      "links": {
+        "parentGenres": {
+          "ids": ["g.446"],
+          "href": "https://api.napster.com/v2.2/genres/g.446"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.297",
+      "name": "String Bands",
+      "href": "https://api.napster.com/v2.2/genres/g.297",
+      "shortcut": "folk/string-bands",
+      "description": "Along with fiddlers, banjo pickers and balladeers, country music in the 1920s was full of String Bands that played a rough and rowdy, but good-natured, and entirely homespun style of music. Fiddle was usually the lead instrument, with the guitar, bass, and banjo along for the ride. The majority of these String Bands were just local players from towns scattered across the southeastern United States. They'd initially come to local prominence by playing community dances or parties. As Hillbilly music caught on, record companies started searching for rural music to record, and many musicians earned greater fame and began touring farther and farther from home. Some, like <a href=\"http://www.rhapsody.com/artist/the-skillet-lickers\">Gid Tanner's Skillet Lickers</a>, and <a href=\"http://www.rhapsody.com/artist/charlie-poole\">Charlie Poole and the North Carolina Ramblers</a>, gained strong followings until 1929, when the Great Depression halted the careers of most of these musicians.",
+      "links": {
+        "parentGenres": {
+          "ids": ["g.446"],
+          "href": "https://api.napster.com/v2.2/genres/g.446"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.350",
+      "name": "Americana",
+      "href": "https://api.napster.com/v2.2/genres/g.350",
+      "shortcut": "folk/americana",
+      "description": "Americana arose as a style of music in reaction to mainstream country radio stations that were over-enamored with \"young country\" stars like <a href=\"http://www.rhapsody.com/artist/alan-jackson\">Alan Jackson</a>, <a href=\"http://www.rhapsody.com/artist/garth-brooks\">Garth Brooks</a> and <a href=\"http://www.rhapsody.com/artist/shania-twain\">Shania Twain</a>. The idea was to create a home for artists who had plenty of country in their music but who were too eclectic and raw for the mainstream. Americana is a broad category that encompasses Nashville fringe artists like <a href=\"http://www.rhapsody.com/artist/allison-moorer\">Allison Moorer</a> and <a href=\"http://www.rhapsody.com/artist/jim-lauderdale\">Jim Lauderdale</a>, as well as stalwart Honky-Tonker <a href=\"http://www.rhapsody.com/artist/dale-watson\">Dale Watson</a> and folk-inspired Singer-Songwriters like <a href=\"http://www.rhapsody.com/artist/fred-eaglesmith\">Fred Eaglesmith</a>.",
+      "links": {
+        "childGenres": {
+          "ids": ["g.443"],
+          "href": "https://api.napster.com/v2.2/genres/g.443"
+        },
+        "parentGenres": {
+          "ids": ["g.446"],
+          "href": "https://api.napster.com/v2.2/genres/g.446"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.381",
+      "name": "Square Dancing",
+      "href": "https://api.napster.com/v2.2/genres/g.381",
+      "shortcut": "folk/square-dancing",
+      "description": "A pre-War tradition from mainly rural western and midwestern communities, square dancing offered an opportunity for people to gather socially and have fun in a morally acceptable way. The music is primarily functional, an often up-tempo combination of Waltz, <a href=\"http://www.rhapsody.com/genre/country/traditional-country\">Traditional Country</a> and <a href=\"http://www.rhapsody.com/genre/country/western-swing\">Western Swing</a>, with an emcee calling out directions to the dancers.",
+      "links": {
+        "parentGenres": {
+          "ids": ["g.446"],
+          "href": "https://api.napster.com/v2.2/genres/g.446"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.400",
+      "name": "Old-Time Revival",
+      "href": "https://api.napster.com/v2.2/genres/g.400",
+      "shortcut": "folk/old-time-revival",
+      "description": "As the Urban Folk revival caught on during the 1950s & early '60s, college educated young people became more enamored with music from the early 20th century. Some stopped at Bluegrass, while others such as <a href=\"http://www.rhapsody.com/artist/mike-seeger\">Mike Seeger</a> and <a href=\"http://www.rhapsody.com/artist/john-cohen\">John Cohen</a> of <a href=\"http://www.rhapsody.com/artist/the-new-lost-city-ramblers\">The New Lost City Ramblers</a> dug deeper into the string bands and Singer-Songwriters of the '20s and earlier. \"Old-Time\" was a term used by the original country folk to describe their music, and the folk revivalists picked up on the name as well. Today, it refers to acoustic music based to some degree around the style of early String Bands like <a href=\"http://www.rhapsody.com/artist/the-skillet-lickers\">the Skillet Lickers</a> and groups like <a href=\"http://www.rhapsody.com/artist/the-carter-family\">the Carter Family</a>.",
+      "links": {
+        "parentGenres": {
+          "ids": ["g.446"],
+          "href": "https://api.napster.com/v2.2/genres/g.446"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.478",
+      "name": "Urban Folk",
+      "href": "https://api.napster.com/v2.2/genres/g.478",
+      "shortcut": "folk/urban-folk",
+      "description": "While traditional Folk music paints rural, blue-collared portraits, contemporary Urban Folk artists like <a href=\"http://www.rhapsody.com/artist/roger-manning\">Roger Manning</a> and <a href=\"http://www.rhapsody.com/artist/ani-difranco\">Ani DiFranco</a> cultivate their Folk-Punk roots on cracked city streets. Owing as much to <a href=\"http://www.rhapsody.com/artist/bob-dylan\">Bob Dylan's</a> persona as to Dust Bowl Ballads, Urban Folk songs are often simple bouts bursting with sharp-witted criticisms.",
+      "links": {
+        "parentGenres": {
+          "ids": ["g.446"],
+          "href": "https://api.napster.com/v2.2/genres/g.446"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.486",
+      "name": "Folk Pop",
+      "href": "https://api.napster.com/v2.2/genres/g.486",
+      "shortcut": "folk/folk-pop",
+      "description": "Folk Pop was born in the 20th century, and is musically synonymous with the music of Singer-Songwriters. The idea originated from recording folk artists who would enter a studio with an acoustic guitar to belt out some songs to be recorded for a label. After the artist finished laying down tracks, the label would hire some session musicians to come in and record a backline of pop architecture in order to make the music more accessible to radio-listeners. Younger storytellers such as <a href=\"http://www.rhapsody.com/artist/elliott-smith\">Elliott Smith</a> and <a href=\"http://www.rhapsody.com/artist/mary-lou-lord\">Mary Lou Lord</a> attracted <a href=\"http://www.rhapsody.com/genre/alt-punk/indie-alternative\">Indie Rock</a> enthusiasts.",
+      "links": {
+        "parentGenres": {
+          "ids": ["g.446"],
+          "href": "https://api.napster.com/v2.2/genres/g.446"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.489",
+      "name": "British Folk",
+      "href": "https://api.napster.com/v2.2/genres/g.489",
+      "shortcut": "folk/british-folk",
+      "description": "A music movement that arose in the late 1960s, British Folk is characterized by the incorporation of blues, jazz and lofty poetics into the straightforward folk canon. The male/female harmonies and group virtuosity of '60s artists <a href=\"http://www.rhapsody.com/artist/fairport-convention\">Fairport Convention</a> and <a href=\"http://www.rhapsody.com/artist/pentangle\">Pentangle</a> are fine examples of the ensemble work often inherent within British Folk. <p><p>Beginning with the intricate fingerpicking of <a href=\"http://www.rhapsody.com/artist/bert-jansch\">Bert Jansch</a>, and later progressing to the overt politics of <a href=\"http://www.rhapsody.com/artist/billy-bragg\">Billy Bragg</a>, British Folk also encompasses the experimental Singer-Songwriter bent of <a href=\"http://www.rhapsody.com/artist/nick-drake\">Nick Drake</a>.",
+      "links": {
+        "parentGenres": {
+          "ids": ["g.446"],
+          "href": "https://api.napster.com/v2.2/genres/g.446"
+        }
+      }
+    }
+  ],
+  "meta": { "totalCount": null, "returnedCount": 16 }
+}

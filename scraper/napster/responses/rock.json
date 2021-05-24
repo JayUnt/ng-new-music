@@ -1,0 +1,229 @@
+{
+  "genres": [
+    {
+      "type": "genre",
+      "id": "g.1",
+      "name": "Roots",
+      "href": "https://api.napster.com/v2.2/genres/g.1",
+      "shortcut": "rock/roots",
+      "description": "No-frills music with straight-ahead lyrics, bands like the <a href=\"http://www.rhapsody.com/artist/bodeans\">BoDeans</a>, <a href=\"http://www.rhapsody.com/artist/the-blasters\">the Blasters</a>, and <a href=\"http://www.rhapsody.com/artist/jason-and-the-scorchers\">Jason and the Scorchers</a> found varying mainstream acceptance for their rural rock. The most recognizable Roots influence in contemporary music can be found in groups <a href=\"http://www.rhapsody.com/artist/counting-crows\">Counting Crows</a> and <a href=\"http://www.rhapsody.com/artist/wilco\">Wilco</a>. Arguably, the <a href=\"http://www.rhapsody.com/genre/country/alt-country\">Alt-Country</a> movement is a descendant of this form.",
+      "links": {
+        "childGenres": {
+          "ids": ["g.461"],
+          "href": "https://api.napster.com/v2.2/genres/g.461"
+        },
+        "parentGenres": {
+          "ids": ["g.5"],
+          "href": "https://api.napster.com/v2.2/genres/g.5"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.460",
+      "name": "Lite Rock",
+      "href": "https://api.napster.com/v2.2/genres/g.460",
+      "shortcut": "rock/lite-rock",
+      "description": "Lite Rock reveals the softer side of rock and pop. Combining the gentle elements of <a href=\"http://www.rhapsody.com/genre/vocal-easy-listening\">Easy Listening</a> with the intimate feel of <a href=\"http://www.rhapsody.com/genre/rock/singer-songwriter\">Singer-Songwriter</a> music, Lite Rock features simple, melodic songs with elaborate production. Lite Rock came into its own in the 1970s, led by stations that played bands like <a href=\"http://www.rhapsody.com/artist/pablo-cruise\">Pablo Cruise</a>, <a href=\"http://www.rhapsody.com/artist/boz-scaggs\">Boz Scaggs</a> and <a href=\"http://www.rhapsody.com/artist/carly-simon\">Carly Simon</a>.  All of this was a precursor to the '80s Adult Contemporary radio format. But Lite Rock stations are out there to this day, playing everything from <a href=\"http://www.rhapsody.com/artist/air-supply\">Air Supply</a> to <a href=\"http://www.rhapsody.com/artist/basia\">Basia</a>.",
+      "links": {
+        "childGenres": {
+          "ids": ["g.114"],
+          "href": "https://api.napster.com/v2.2/genres/g.114"
+        },
+        "parentGenres": {
+          "ids": ["g.5"],
+          "href": "https://api.napster.com/v2.2/genres/g.5"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.464",
+      "name": "Modern Folk",
+      "href": "https://api.napster.com/v2.2/genres/g.464",
+      "shortcut": "rock/modern-folk",
+      "description": "Modern Folk describes music influenced both by <a href=\"http://www.rhapsody.com/genre/folk/traditional-folk\">Traditional Folk</a> and <a href=\"http://www.rhapsody.com/genre/alt-punk/punk\">Punk</a>. Artists like <a href=\"http://www.rhapsody.com/artist/billy-bragg\">Billy Bragg</a> and <a href=\"http://www.rhapsody.com/artist/ani-difranco\">Ani DiFranco</a> blend the rawness of Punk, with folk-oriented songwriting. On the other side of the Modern Folk spectrum, bands like <a href=\"http://www.rhapsody.com/artist/10000-maniacs\">10,000 Maniacs</a> and <a href=\"http://www.rhapsody.com/artist/poi-dog-pondering\">Poi Dog Pondering</a> incorporate folk sounds and attitudes into lighter, adult-oriented rock.",
+      "links": {
+        "parentGenres": {
+          "ids": ["g.5"],
+          "href": "https://api.napster.com/v2.2/genres/g.5"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.42",
+      "name": "Classic Rock",
+      "href": "https://api.napster.com/v2.2/genres/g.42",
+      "shortcut": "rock/classic-rock",
+      "description": "Less a genre than a radio marketing term, Classic Rock is a blanket term for decades-old rock anthems, Classic Rock's diverse styles include the arena rock of <a href=\"http://www.rhapsody.com/artist/led-zeppelin\">Led Zeppelin</a>, the <a href=\"http://www.rhapsody.com/genre/rock/blues-and-boogie-rock/southern-rock\">Southern Rock</a> of <a href=\"http://www.rhapsody.com/artist/lynyrd-skynyrd\">Lynyrd Skynyrd</a>, the classic pop of the Beatles and early <a href=\"http://www.rhapsody.com/genre/metal\">Metal</a> such as <a href=\"http://www.rhapsody.com/artist/black-sabbath\">Black Sabbath</a>. Loud guitars with heavy hooks are the bread-and-butter of Classic Rock.",
+      "links": {
+        "childGenres": {
+          "ids": ["g.360"],
+          "href": "https://api.napster.com/v2.2/genres/g.360"
+        },
+        "parentGenres": {
+          "ids": ["g.5"],
+          "href": "https://api.napster.com/v2.2/genres/g.5"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.44",
+      "name": "Art & Progressive Rock",
+      "href": "https://api.napster.com/v2.2/genres/g.44",
+      "shortcut": "rock/art-and-progressive-rock",
+      "description": "Progressive rock came out of the <a href=\"http://www.rhapsody.com/genre/oldies/psychedelic\">psychedelic boom</a> when the desire to experiment led musicians to incorporate classical elements and intellectual attitude in their music. Prog rock, refers to the mystical, multi-chaptered bombastic rock popularized by the keyboard-driven excesses of <a href=\"http://www.rhapsody.com/artist/emerson-lake-and-palmer\">Emerson Lake & Palmer</a> and the symphonic concept records of <a href=\"http://www.rhapsody.com/artist/yes\">Yes</a>.",
+      "links": {
+        "childGenres": {
+          "ids": ["g.124", "g.321", "g.356"],
+          "href": "https://api.napster.com/v2.2/genres/g.124,g.321,g.356"
+        },
+        "parentGenres": {
+          "ids": ["g.5"],
+          "href": "https://api.napster.com/v2.2/genres/g.5"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.45",
+      "name": "Blues & Boogie Rock",
+      "href": "https://api.napster.com/v2.2/genres/g.45",
+      "shortcut": "rock/blues-and-boogie-rock",
+      "description": "Blues and Boogie Rock evolved from the first wave of <a href=\"http://www.rhapsody.com/genre/oldies/british-invasion\">British Invasion</a> bands, including <a href=\"http://www.rhapsody.com/artist/the-rolling-stones\">the Rolling Stones</a>, <a href=\"http://www.rhapsody.com/artist/the-animals\">the Animals</a>, <a href=\"http://www.rhapsody.com/artist/them\">Them</a>, and <a href=\"http://www.rhapsody.com/artist/the-yardbirds\">the Yardbirds</a>. These bands, and to a lesser extent their American counterparts, imitated their heroes: <a href=\"http://www.rhapsody.com/artist/muddy-waters\">Muddy Waters</a>, <a href=\"http://www.rhapsody.com/artist/john-lee-hooker\">John Lee Hooker</a>, <a href=\"http://www.rhapsody.com/artist/howlin-wolf\">Howlin' Wolf</a>, and other <a href=\"http://www.rhapsody.com/genre/blues\">blues artists</a>. Many focused on the blues' 12-bar form, especially its well-worn, familiar shuffle, and copped a license from guitar stingers <a href=\"http://www.rhapsody.com/artist/bb-king\">B.B. King</a> and <a href=\"http://www.rhapsody.com/artist/albert-king\">Albert King</a> to make the guitar solo one of the more prominent parts of a song.",
+      "links": {
+        "childGenres": {
+          "ids": ["g.8", "g.357"],
+          "href": "https://api.napster.com/v2.2/genres/g.8,g.357"
+        },
+        "parentGenres": {
+          "ids": ["g.5"],
+          "href": "https://api.napster.com/v2.2/genres/g.5"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.111",
+      "name": "Glam",
+      "href": "https://api.napster.com/v2.2/genres/g.111",
+      "shortcut": "rock/glam",
+      "description": "Characterized by melodic hard rock combined with sexually ambiguous fashion sense, glam rose in the 1960s amidst a culture of newfound sexual freedom. For rockers <a href=\"http://www.rhapsody.com/artist/david-bowie\">David Bowie</a> and <a href=\"http://www.rhapsody.com/artist/t-rex\">T. Rex</a>, rock wasn't a mode of consciousness-raising like it was for some of their contemporaries; it was rather an avenue to pure and decadent hedonism. Glam had a huge influence on movements like new romantic, synth pop and goth rock.  But the primary stars of the glam movement, from the <a href=\"http://www.rhapsody.com/artist/new-york-dolls\">New York Dolls</a> to <a href=\"http://www.rhapsody.com/artist/roxy-music\">Roxy Music</a>, didn't find much success in the US until after the makeup came off. Through the '70s and '80s, however, glam-inspired pop metal, beginning with androgynous rockers <a href=\"http://www.rhapsody.com/artist/kiss\">Kiss</a>, topped the charts. In the '90s, glam was mirrored in Britpop's decadence and, occasionally, its fashion sense.",
+      "links": {
+        "parentGenres": {
+          "ids": ["g.5"],
+          "href": "https://api.napster.com/v2.2/genres/g.5"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.112",
+      "name": "Hard Rock",
+      "href": "https://api.napster.com/v2.2/genres/g.112",
+      "shortcut": "rock/hard-rock",
+      "description": "As the 1960s saw rock acts like <a href=\"http://www.rhapsody.com/artist/jimi-hendrix\">Jimi Hendrix</a> and <a href=\"http://www.rhapsody.com/artist/the-who\">the Who</a> turn up their amps, bands began to augment their guitar sounds with distortion. Their blues-based structures, with driving rock guitars and pop hooks, were the rudiments of Hard Rock. The basics of Hard Rock haven't changed, but the myriad styles it has spawned -- from Heavy Metal to Power Pop -- have taken those simple elements in hundreds of directions.",
+      "links": {
+        "childGenres": {
+          "ids": ["g.395", "g.396", "g.316"],
+          "href": "https://api.napster.com/v2.2/genres/g.395,g.396,g.316"
+        },
+        "parentGenres": {
+          "ids": ["g.5"],
+          "href": "https://api.napster.com/v2.2/genres/g.5"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.113",
+      "name": "Instrumental Rock",
+      "href": "https://api.napster.com/v2.2/genres/g.113",
+      "shortcut": "rock/instrumental-rock",
+      "description": "Everything from the southern soul of <a href=\"http://www.rhapsody.com/artist/booker-t-and-the-mgs\">Booker T. & the MG's</a> to the <a href=\"http://www.rhapsody.com/genre/oldies/60s-oldies/surf\">surf rock</a> of <a href=\"http://www.rhapsody.com/artist/the-ventures\">the Ventures</a> to the retro irony of <a href=\"http://www.rhapsody.com/artist/trans-am\">Trans Am</a>. For modern artists like virtuoso guitarist <a href=\"http://www.rhapsody.com/artist/joe-satriani\">Joe Satriani</a>, instrumental rock exists as a showcase for a prodigious musician, and vocals would merely distract from the amazing technical playing.",
+      "links": {
+        "parentGenres": {
+          "ids": ["g.5"],
+          "href": "https://api.napster.com/v2.2/genres/g.5"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.199",
+      "name": "Jam Rock",
+      "href": "https://api.napster.com/v2.2/genres/g.199",
+      "shortcut": "rock/jam-rock",
+      "description": "Rooted in the free-form extended jams of <a href=\"http://www.rhapsody.com/genre/oldies/psychedelic\">psychedelic</a> icons <a href=\"http://www.rhapsody.com/artist/grateful-dead\">the Grateful Dead</a>, the bluesy riffs and <a href=\"http://www.rhapsody.com/genre/jazz\">Jazz</a> comping of <a href=\"http://www.rhapsody.com/artist/the-allman-brothers-band\">the Allman Brothers</a>, and the Latin-tinged rock of <a href=\"http://www.rhapsody.com/artist/santana\">Santana</a>, Jam Rock came into its own in the 1980s and '90s. The Dead were the quintessential point band for the jam rock movement, gaining a grassroots fan base through constant touring and word-of-mouth evangelism. Jam Rock's essence is in live performance, as recorded formats place limits on spontaneity. Jam bands minimize the importance of song structures, relying instead upon an improvisational sprit that has its roots in the free jazz.  Today's torch bearers are bands <a href=\"http://www.rhapsody.com/artist/phish\">Phish</a> and <a href=\"http://www.rhapsody.com/artist/umphreys-mcgee\">Umphrey's McGee</a>.",
+      "links": {
+        "parentGenres": {
+          "ids": ["g.5"],
+          "href": "https://api.napster.com/v2.2/genres/g.5"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.352",
+      "name": "Funk Rock",
+      "href": "https://api.napster.com/v2.2/genres/g.352",
+      "shortcut": "rock/funk-rock",
+      "description": "P-Funk poobah George Clinton said \"The funk is its own reward,\" and the people listened. Beginning in the late 60s, <a href=\"http://www.rhapsody.com/artist/funkadelic\">George Clinton's band</a> of African-American fusionists took the syncopated rhythms of <a href=\"http://www.rhapsody.com/artist/james-brown\">James Brown</a> and added heavy doses of flamboyance and hard rock guitar to spawn a new groove. That flock became the forebears of funk rock, from <a href=\"http://www.rhapsody.com/artist/war\">War</a> and <a href=\"http://www.rhapsody.com/artist/cymande\">Cymande</a> in the 1970s to <a href=\"http://www.rhapsody.com/artist/talking-heads\">the Talking Heads</a> and <a href=\"http://www.rhapsody.com/artist/gang-of-four\">Gang of Four</a> in the '80s.",
+      "links": {
+        "parentGenres": {
+          "ids": ["g.5"],
+          "href": "https://api.napster.com/v2.2/genres/g.5"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.409",
+      "name": "Folk-Rock",
+      "href": "https://api.napster.com/v2.2/genres/g.409",
+      "shortcut": "rock/folk-rock",
+      "description": "Folk-rock melds folk's lyrical urgency and topicality with the rhythm and noise of rock. <a href=\"http://www.rhapsody.com/genre/alt-punk/indie-alternative/jangle-pop\">Jangle pop</a> architects <a href=\"http://www.rhapsody.com/artist/the-byrds\">the Byrds</a> kickstarted folk-rock's mid-'60s heyday by applying the intensity of rock to folk material by <a href=\"http://www.rhapsody.com/artist/bob-dylan\">Bob Dylan</a> and <a href=\"http://www.rhapsody.com/artist/pete-seeger\">Pete Seeger</a>. Dylan's own incendiary electric performances with <a href=\"http://www.rhapsody.com/artist/the-band\">the Band</a> in '66 also pushed the merge of the two genres. <p><p>As the '60s wore on, folk-rock took on a variety of guises, from the urban lushness of <a href=\"http://www.rhapsody.com/artist/simon-and-garfunkel\">Simon and Garfunkel</a> to the California sprawl of <a href=\"http://www.rhapsody.com/artist/the-mamas-and-the-papas\">the Mamas and the Papas</a> and the ragged tension of <a href=\"http://www.rhapsody.com/artist/neil-young\">Neil Young</a>, each of whom sought to expand on the standard set by the Byrds and Dylan only a few years before. The folk-rock tradition continued into the '80s, as the second wave of jangle pop bands like <a href=\"http://www.rhapsody.com/artist/rem\">R.E.M.</a> and cult favorites <a href=\"http://www.rhapsody.com/artist/toad-the-wet-sprocket\">Toad the Wet Sprocket</a> revisited the folk-rock of the Byrds.",
+      "links": {
+        "childGenres": {
+          "ids": ["g.466"],
+          "href": "https://api.napster.com/v2.2/genres/g.466"
+        },
+        "parentGenres": {
+          "ids": ["g.5"],
+          "href": "https://api.napster.com/v2.2/genres/g.5"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.454",
+      "name": "Adult Alternative",
+      "href": "https://api.napster.com/v2.2/genres/g.454",
+      "shortcut": "rock/adult-alternative",
+      "description": "Adult alternative filled a niche in the 1990s as a middle ground for artists too safe for <a href=\"http://www.rhapsody.com/genre/alt-punk\">alt rock</a>, yet well short of the level of conservatism preferred by the adult rock audience. Adult alternative wisely found a balanced following between genders, both onstage and in the audience; women and men were drawn in equal numbers to performances by the <a href=\"http://www.rhapsody.com/artist/dave-matthews-band\">Dave Matthews Band</a> and <a href=\"http://www.rhapsody.com/artist/jewel\">Jewel</a>, demonstrating the genre's commercial dominance since the rise of alternative in the early '90s. Albums by <a href=\"http://www.rhapsody.com/artist/sarah-mclachlan\">Sarah McLachlan</a> and <a href=\"http://www.rhapsody.com/artist/hootie-and-the-blowfish\">Hootie & the Blowfish</a> sold in far greater numbers than the more experimental offerings by '80s stylistic lynchpins <a href=\"http://www.rhapsody.com/artist/rem\">R.E.M.</a> and <a href=\"http://www.rhapsody.com/artist/u2\">U2</a>.",
+      "links": {
+        "parentGenres": {
+          "ids": ["g.5"],
+          "href": "https://api.napster.com/v2.2/genres/g.5"
+        }
+      }
+    },
+    {
+      "type": "genre",
+      "id": "g.458",
+      "name": "Singer-Songwriter",
+      "href": "https://api.napster.com/v2.2/genres/g.458",
+      "shortcut": "rock/singer-songwriter",
+      "description": "Mostly aimed at guitar playing, folk-inspired songwriters, the Singer-Songwriter tag applies to post-Dylan, folk-leaning solo artists like <a href=\"http://www.rhapsody.com/artist/joni-mitchell\">Joni Mitchell</a>, <a href=\"http://www.rhapsody.com/artist/james-taylor\">James Taylor</a>, and <a href=\"http://www.rhapsody.com/artist/jackson-browne\">Jackson Browne</a>. The tradition still continues with artists as varied as folk & guitar legend <a href=\"http://www.rhapsody.com/artist/richard-thompson\">Richard Thompson</a>, <a href=\"http://www.rhapsody.com/genre/country/alt-country\">Alt-Country</a> poet <a href=\"http://www.rhapsody.com/artist/richard-buckner\">Richard Buckner</a>, <a href=\"http://www.rhapsody.com/artist/tori-amos\">Tori Amos</a> and <a href=\"http://www.rhapsody.com/artist/jewel\">Jewel</a>. Though the songwriting is often confessional and introspective, the Singer-Songwriter label is generally applied to solo artists who concentrate on song craft over all else.",
+      "links": {
+        "parentGenres": {
+          "ids": ["g.5"],
+          "href": "https://api.napster.com/v2.2/genres/g.5"
+        }
+      }
+    }
+  ],
+  "meta": { "totalCount": null, "returnedCount": 14 }
+}

@@ -1,13 +1,22 @@
+
+// Crawler broke, created pdf of screen to see what was happening
+//  They put captcha on the screen to make sure its a user and not a bot..
+//  Have to find a different site to use, preferably an api
+
+//  https://www.discogs.com/applications/edit/34552
+
+
 const { BrowserHandler, waitForBrowser } = require("./browserHandler");
+const { mergeAlbums } = require('../utils/album.utils');
 
 const baseUrl = 'https://www.albumoftheyear.org/{YEAR}/releases/{MONTH}.php?genre={GENRE}';
 const genres = [
   { id: 2, name: 'Alternative Rock' },
-  { id: 7, name: 'Rock' },
-  { id: 1, name: 'Indie Rock' },
-  { id: 28, name: 'Punk' },
-  { id: 69, name: 'Psychedelic Pop' },
-  { id: 5, name: 'Folk' }
+  // { id: 7, name: 'Rock' },
+  // { id: 1, name: 'Indie Rock' },
+  // { id: 28, name: 'Punk' },
+  // { id: 69, name: 'Psychedelic Pop' },
+  // { id: 5, name: 'Folk' }
 ];
 const months = {
   1: 'january-01',
@@ -31,34 +40,6 @@ const getApiUrl = (year, month, genre) => {
     .replace('{GENRE}', genre.id)
 };
 
-
-
-const getAlbumId = (year, artist, name) => {
-  const formatStr = (str) => str.replace(/[\W_]+/g, "_").toUpperCase();
-
-  return `${year}-${formatStr(artist)}-${formatStr(name)}`;
-};
-
-const mergeAlbums = (albums) => {
-
-  const newAlbums = [];
-  const map = new Map();
-  for (const album of albums) {
-    const id = getAlbumId(album.releaseYear, album.artist, album.name);
-    if (!map.has(id)) {
-      map.set(id, true);    // set any value to Map
-      newAlbums.push({
-        ...album,
-        id: id
-      });
-    } else {
-      newAlbums.find(a => a.id === id).genres.push(...album.genres);
-    }
-  }
-
-  return newAlbums;
-}
-
 const scraperObject = {
   browserHandler: null,
   async scrapePage(year, month, genre) {
@@ -67,18 +48,27 @@ const scraperObject = {
     await waitForBrowser(this.browserHandler);
     let page = await this.browserHandler.browser.newPage();
     await page.setDefaultNavigationTimeout(0);
-    
-    
+
+
     console.log(`Retrieving albums for ${month}/${year} - ${genre.name}`);
     console.log(`url: ${url}`);
 
-    // Navigate to the selected page
-    await page.goto(url);
-
-    // Wait for the required DOM to be rendered
-    await page.waitForSelector('.facetContent');
-
     try {
+      // Navigate to the selected page
+      await page.goto(url, {
+        waitUntil: 'networkidle0',
+      });
+
+      // await page.pdf({
+      //   path: 'screenshot.pdf',
+      // });
+
+      // Wait for the required DOM to be rendered
+      await page.waitForSelector('.facetContent', {
+        visible: true,
+      });
+
+
       // Get all of the albums
       const monthsAlbums = await page.$$eval('.albumBlock', (albumBlocks, genre) => {
 
@@ -116,7 +106,8 @@ const scraperObject = {
   async scrapeAll() {
     this.browserHandler = new BrowserHandler();
 
-    const numMonths = 2;
+    // const numMonths = 2;
+    const numMonths = 1;
     let currDate = new Date();
     currDate.setDate(1);
 

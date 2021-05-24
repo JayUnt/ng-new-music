@@ -1,7 +1,7 @@
 const pageScraper = require('./pageScraper');
-const firebaseService = require('./firebase.service');
+const firebaseService = require('../firebase.service');
 
-(async() => {
+(async () => {
   console.log('Start Scraping');
   const albums = await pageScraper.scrapeAll();
 

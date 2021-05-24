@@ -1,0 +1,19 @@
+{
+  "name": "scraper-spotify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "date-fns": "^2.21.3",
+    "dotenv": "^9.0.2",
+    "firebase": "^8.6.2",
+    "firebase-admin": "^9.8.0",
+    "spotify-web-api-node": "^5.0.2"
+  }
+}

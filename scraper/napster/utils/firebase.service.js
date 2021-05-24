@@ -1,6 +1,6 @@
 const admin = require('firebase-admin');
 
-const serviceAccount = require('./keys/ng-new-music-1eb08f7cc976.json');
+const serviceAccount = require('../../keys/ng-new-music-1eb08f7cc976.json');
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
