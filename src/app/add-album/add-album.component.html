@@ -54,14 +54,14 @@
         </mat-chip-list>
       </mat-form-field>
     </div>
-    
+
     <div class="mdc-layout-grid__cell">
       <mat-form-field>
         <mat-label>Spotify Link</mat-label>
         <input matInput [(ngModel)]="album.spotifyLink" />
       </mat-form-field>
     </div>
-    
+
     <div class="mdc-layout-grid__cell">
       <mat-form-field>
         <mat-label>Rating</mat-label>
@@ -74,11 +74,10 @@
         <input matInput [(ngModel)]="favoriteSong" />
       </mat-form-field>
     </div>
-
   </div>
 </div>
 
 <div mat-dialog-actions>
-  <button mat-button (click)="submit()">OK</button>
-  <button mat-button (click)="cancel()">Cancel</button>
+  <button mat-raised-button color="primary" (click)="submit()">OK</button>
+  <button mat-raised-button (click)="cancel()">Cancel</button>
 </div>
